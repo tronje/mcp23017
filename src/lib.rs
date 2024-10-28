@@ -116,6 +116,7 @@ where
     /// This will read the register (`port_a_reg` for pins 0-7, `port_b_reg` for the other eight),
     /// set the bit (as specified by the pin position within the register), and write the register
     /// back to the device.
+    #[inline(never)]
     fn update_register_bit(
         &mut self,
         pin: u8,
